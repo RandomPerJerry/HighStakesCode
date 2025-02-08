@@ -285,6 +285,8 @@ void competition_initialize() {}
  * task, not resume it from where it left off.
  */
 void opcontrol() {
+    robot::mechanisms::doinker.set_value(false);
+
     while (true) {
         controls::Mechanisms::drive();
         controls::Mechanisms::update_hang();
