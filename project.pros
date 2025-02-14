@@ -1,7 +1,11 @@
 {
   "py/object": "pros.conductor.project.Project",
   "py/state": {
-    "project_name": "Maina",
+<<<<<<< HEAD
+    "project_name": "Liam-Test",
+=======
+    "project_name": "why is this happening",
+>>>>>>> c6f96015ecaf8884782d51ad20585e033abc083a
     "target": "v5",
     "templates": {
       "LemLib": {
@@ -298,9 +302,14 @@
       }
     },
     "upload_options": {
-      "slot": 1,
-      "description": "",
-      "icon": "pizza"
+<<<<<<< HEAD
+      "slot": 8,
+      "description": "skilllzzzz",
+=======
+      "slot": 2,
+      "description": "Bad Code fr",
+>>>>>>> c6f96015ecaf8884782d51ad20585e033abc083a
+      "icon": "planet"
     },
     "use_early_access": false
   }

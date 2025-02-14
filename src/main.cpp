@@ -28,7 +28,7 @@ namespace controls {
         static constexpr double LB_POSITIONS[] = {
             0.0,    // IDLE
             4800.0,  // INTAKE    
-            6000.0   // CLEAR
+            18000.0   // CLEAR
         };
 
         static constexpr int LB_POSITION_LOSS_BOUNDARY = 6000;
