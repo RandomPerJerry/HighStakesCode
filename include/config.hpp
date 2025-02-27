@@ -27,6 +27,7 @@ namespace robot {
         // Sensors/Digital inputs
         extern pros::Rotation lbRotationSensor;
         extern pros::Optical opticalSensor;
+        extern pros::Distance distanceSensor;
     }
 
     namespace pid {
@@ -53,11 +54,6 @@ namespace robot {
             4200.0, // INTAKE
             6000.0  // CLEAR
         };
-
-        // LB Functions
-        void moveTo(LBToggleState state);
-        void waitUntilSettled();
-        LBToggleState getCurrentState();
     }
 }
 

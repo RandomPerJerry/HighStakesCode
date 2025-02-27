@@ -12,7 +12,7 @@ namespace robot {
 
         // Sensors
         pros::Rotation verticalRotation(-1);
-        pros::Imu imu(17);    
+        pros::Imu imu(17);
 
         // Tracking wheel setup
         lemlib::TrackingWheel verticalTrackingWheel(
@@ -62,15 +62,29 @@ namespace robot {
             100,// small error timeout
             3,  // large error range
             500,// large error timeout
-            0   // slew rate
+            0   // slew rate    
         );  
+
+        lemlib::ExpoDriveCurve throttleCurve(
+            10, // Joystick deadband
+            20, // Minimum output
+            0.995 // Curve gain
+        );
+
+        lemlib::ExpoDriveCurve turnCurve(
+            10, // Joystick deadband
+            20, // Minimum output
+            0.995 // Curve gain
+        );
 
         // Chassis instance
         lemlib::Chassis chassis(
             drivetrain,
             lateralController,
             angularController,
-            sensors
+            sensors,
+            &throttleCurve,
+            &turnCurve
         );
     }
 
@@ -80,7 +94,7 @@ namespace robot {
    
         // Digital I/O
         pros::Rotation lbRotationSensor (15);
-        pros::Optical opticalSensor(11);
+        pros::Optical opticalSensor(8);
 
         // Digital Out
         pros::ADIDigitalOut hang('F');
