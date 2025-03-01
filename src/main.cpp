@@ -338,8 +338,7 @@ void initialize() {
             // pros::lcd::print(1, "Chassis Position: y: %f", robot::drivetrain::chassis.getPose().y);
             // pros::lcd::print(2, "Chassis Position: heading : %f", robot::drivetrain::chassis.getPose().theta);
             // pros::lcd::print(3, "Intake Motor: %f", robot::mechanisms::intakeMotor.get_actual_velocity());
-            pros::lcd::print(0, "Encoder Units: %f", std::abs(robot::mechanisms::intakeMotor.get_position()));
-            pros::lcd::print(3, "Hue: %f", robot::mechanisms::opticalSensor.get_hue());
+
 
             pros::delay(robot::constants::LOOP_DELAY);
         }   
